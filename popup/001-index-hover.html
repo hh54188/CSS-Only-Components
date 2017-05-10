@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <style>
+            #trigger {
+                margin-top: 50vh;
+                position: relative; /* 关键点，用于控制相对位移 */
+            }
+
+            #menu {
+                width: 200px;
+                height: 100px;
+
+                position: absolute; /* 关键点，用于控制相对位移 */
+                left: -220px;
+
+                /* 用于垂直居中 */
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            #trigger #menu {
+                display: none;
+            }
+
+            #trigger:hover #menu {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="trigger" class="btn btn-default pull-right">
+            <div id="menu" class="panel panel-default" >
+                <div class="panel-heading">head</div>
+                <div class="panel-body">
+                    content
+                </div>
+            </div>
+            <span>Hover on me</span>
+        </button>
+    </body>
+</html>
