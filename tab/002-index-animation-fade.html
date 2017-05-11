@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <style>
+            body {
+                padding: 20px 0 0 20px;
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            input[type="radio"]:checked + .tab-item {
+                opacity: 1;
+                z-index: 2;
+            }
+
+            #container {
+                width: 500px;
+                height: 400px;
+                position: relative;
+            }
+            .tab-item {
+                position: absolute;
+                left: 0;
+                top: 0;
+                
+                width: 100%;
+                height: 100%;
+
+                opacity: 0;
+                z-index: 1;
+
+                transition: all 0.3s ease-out;
+            }
+            .tab-content {
+                padding: 10px 0 0;
+            }
+
+            /* Override */
+            .nav a {
+                padding: 0!important;
+            }
+            .nav a label {
+                padding: 10px 15px;                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            
+            <input name="tab" type="radio" id="tab-01" checked />
+            <div class="tab-item">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="javascript:void(0);"><label for="tab-01">Home</label></a></li>
+                    <li><a href="javascript:void(0);"><label for="tab-02">Profile</label></a></li>
+                    <li><a href="javascript:void(0);"><label for="tab-03">Messages</label></a></li>
+                </ul>
+                <div class="tab-content">
+                    This is Home tab
+                </div>
+            </div>
+
+            <input name="tab" type="radio" id="tab-02" />
+            <div class="tab-item">
+                <ul class="nav nav-tabs">
+                    <li><a href="javascript:void(0);"><label for="tab-01">Home</label></a></li>
+                    <li class="active"><a href="javascript:void(0);"><label for="tab-02">Profile</label></a></li>
+                    <li><a href="javascript:void(0);"><label for="tab-03">Messages</label></a></li>
+                </ul>
+                <div class="tab-content">
+                    This is Profile one
+                </div>
+            </div>
+
+            <input name="tab" type="radio" id="tab-03" />
+            <div class="tab-item">
+                <ul class="nav nav-tabs">
+                    <li><a href="javascript:void(0);"><label for="tab-01">Home</label></a></li>
+                    <li><a href="javascript:void(0);"><label for="tab-02">Profile</label></a></li>
+                    <li class="active"><a href="javascript:void(0);"><label for="tab-03">Messages</label></a></li>
+                </ul>
+                <div class="tab-content">
+                    This is Messages one
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            input[type="radio"] {
+                display: none;
+            }
+            input[type="radio"]:checked + div {
+                opacity: 1;
+                z-index: 2;
+            }
+            #carouel-container {
+                width: 300px;
+                height: 200px;
+                border: 1px solid #eeeeee;
+
+                position: relative;
+            }
+            .carousel-item {
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                width: 100%;
+                height: 100%;
+                
+                opacity: 0;
+
+                transition: all 0.3s ease-out;
+                z-index: 1;                
+            }
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .arrow-left {
+                left: 0;
+            }
+            .arrow-left:after {
+                content: '<-';
+            }
+            .arrow-right {
+                right: 0;
+            }
+            .arrow-right::after {
+                content: '->';                
+            }
+
+            .color-red {
+                background: red;
+            }
+
+            .color-orange {
+                background: orange;
+            }
+
+            .color-skyblue {
+                background: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="carouel-container">
+            <input id="item-01" name="item" type="radio" checked>
+            <div class="carousel-item color-red">
+                <p>This is carousel one</p>
+                <label for="item-03" class="arrow arrow-left"></label>
+                <label for="item-02" class="arrow arrow-right"></label>
+            </div>
+            <input id="item-02" name="item" type="radio">
+            <div class="carousel-item color-orange">
+                <p>This is carousel two</p>                
+                <label for="item-01" class="arrow arrow-left"></label>
+                <label for="item-03" class="arrow arrow-right"></label>
+            </div>
+            <input id="item-03" name="item" type="radio">
+            <div class="carousel-item color-skyblue">
+                <p>This is carousel three</p>                                
+                <label for="item-02" class="arrow arrow-left"></label>
+                <label for="item-01" class="arrow arrow-right"></label>
+            </div>                        
+        </div>
+    </body>
+</html>
