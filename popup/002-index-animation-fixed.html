@@ -11,18 +11,22 @@
                 width: 200px;
                 height: 100px;
 
-                position: absolute; /* 关键点，用于控制相对位移 */
-                left: -220px;
+                position: absolute;
+                left: -20px;
+                top: -20px;
 
-                /* 用于垂直居中 */
-                top: 50%;
-                transform: translateY(-50%);
+                transform: scale(0.1);
 
-                display: none;                
+                /* 动画属性 */
+                transition: all .3s ease-out;
+                opacity: 0;                
             }
 
             #trigger:hover #menu {
-                display: block;
+                transform: scale(1) translateY(-50%);                
+                left: -220px;
+                top: 50%;
+                opacity: 1;                
             }
         </style>
     </head>
